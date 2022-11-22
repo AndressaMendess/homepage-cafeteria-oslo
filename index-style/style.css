@@ -261,7 +261,7 @@ nav {
 /*--------Starts Footer---------*/
 footer {
     min-height: 300px;
-    padding: 1rem;
+    padding: 2rem;
     background-color: var(--background);
     color: #241d1b;
     display: flex;
@@ -273,7 +273,7 @@ footer {
 footer .list-container {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
 }
 
 footer ul {
@@ -294,6 +294,13 @@ footer ul li p {
 footer ul .list__title p {
     font-weight: 800;
     margin-bottom: 1rem;
+}
+
+footer button {
+    padding: 1rem;
+    border: none;
+    background-color: #852529;
+    color: #fff;
 }
 
 /*--------Finishes Footer---------*/
@@ -419,6 +426,14 @@ button #icon::before {
 }
 
 .map iframe {
+    width: 90%;
+}
+
+footer .list-container {
+    flex-direction: column;
+}
+
+footer ul {
     width: 90%;
 }
 }
