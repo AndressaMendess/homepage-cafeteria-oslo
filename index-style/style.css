@@ -6,6 +6,7 @@
     --corpo: 'Raleway', sans-serif;
     --background: #ded6c0;
     --texto: #f5f0ed;
+    --cor1: #241d1b;
 }
 
 *{
@@ -23,7 +24,7 @@ body {
 }
 
 /*---------Starts Header-----------*/
-#header-container {
+.header-container {
     width: 100%;
     min-height: 600px;
     display: flex;
@@ -32,7 +33,7 @@ body {
     background-size: cover;
 }
 
-#header-text {
+.header__text {
     max-width: 750px;
     display: flex;
     flex-direction: column;
@@ -44,17 +45,17 @@ body {
     padding: 2rem;
 }
 
-#header-text h1 {
+.header__text h1 {
     font: 900 2.5em var(--corpo);
     margin: 20px 0px;
 }
 
-#header-text h3 {
+.header__text h3 {
     font: 500 1.2em var(--corpo);
     line-height: 1.5em;
 }
 
-#divisor {
+.divisor {
     display: block;
     height: 2px;
     width: 40%;
@@ -66,79 +67,73 @@ nav {
     width: 100%;
     height: 80px;
     padding: 1rem;
+    border-bottom: 1px solid #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#menu-desktop {
+.menu-desktop {
     display: flex;
     align-items: center;
 }
 
-#menu-desktop li {
+.menu-desktop li {
     padding: 1rem;
 }
 
-#menu-desktop a {
+.menu-desktop a {
     font-weight: 700;
     color: var(--texto);
     transition: .1s all;
 }
 
-#menu-desktop a:hover {
+.menu-desktop a:hover {
     border-bottom: 2px solid var(--texto);
     padding-bottom: .5rem;
 }
 
-#menu-mobile {
+.menu-mobile {
     display: none;
 }
 /*--------Finish header---------*/
 
-
-/*--------Starts Section 1---------*/
-.container, .left-container, .right-container {
+/*--------Starts Description---------*/
+.description {
     display: flex;
+    width: 100%;
 }
 
-.container > div {
+.description div {
     width: 50%;
-    height: 250px;
-    padding: 20px;
-    flex-direction: row;
-    text-align: center;
+    min-height: 400px;
+    padding: 2rem;
+    color: var(--cor1);
+    border-right: .5px solid var(--cor1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    align-content: center;
-    justify-content: center;
+    text-align: center;
 }
 
-.left-container {
-    background-color: #d03b40;
-    color: #ded6c0;
+.description div p {
+    line-height: 1.8em;
 }
 
-.right-container {
-    background-color: #ded6c0;
-    color: #d03b40;
+.description img {
+    width: 40%;
 }
-
-.left-text h1, .right-text h1 {
-    font-weight: 800;
-}
-
-.left-text p, .right-text p {
-    margin: 1rem;
-    line-height: 1.5em;
-}
-/*-------- Finishes Section 1 ---------*/
+/*--------Finishes Description---------*/
 
 /*-------- Starts container-two ---------*/
 .container-two {
     width: 100%;
     min-height: 500px;
-    display: flex;
     background: #ded6c0 url(../media/Fondo2.jpg) center center fixed;
+    border-top: 1px solid var(--cor1);
+    border-bottom: 1px solid var(--cor1);
+    display: flex;
     background-size: cover;
 }
 
@@ -165,43 +160,17 @@ nav {
     padding: .8rem 1rem;
     background-color: transparent;
     border: 2px solid var(--background);
-    border-radius: 30px;
     cursor: pointer;
     transition: .3s all;
 }
 
 .container-two .container-two__text button:hover {
     background-color: #ded6c0d2;
-    color: #241d1b;
+    color: var(--cor1);
+    box-shadow: 8px 8px var(--cor1);
 }
 /*-------- Finishes container-two ---------*/
 
-
-/*--------Starts Description---------*/
-.description {
-    display: flex;
-}
-
-.description div {
-    width: auto;
-    min-height: 400px;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    color: #241d1b;
-}
-
-.description div p {
-    line-height: 1.8em;
-}
-
-.description img {
-    width: 40%;
-}
-/*--------Finishes Description---------*/
 
 /*-------- Starts map ---------*/
 .map {
@@ -220,8 +189,7 @@ nav {
     height: 500px;
     padding: 2rem;
     background-color: #ded6c0c5;
-    border: 2px solid var(--background);
-    border-radius: 10px;
+    border: 1px solid var(--cor1);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -246,14 +214,13 @@ nav {
     font-weight: 800;
     padding: .8rem 1.8rem;
     background-color: #d03b40;
-    border: none;
-    border-radius: 30px;
+    border: 1px solid var(--cor1);
     cursor: pointer;
     transition: .3s all;
 }
 
 .map__item button:hover {
-    background-color: #852529;
+    box-shadow: 8px 8px var(--cor1);
 }
 /*-------- Finishes map ---------*/
 
@@ -263,7 +230,8 @@ footer {
     min-height: 300px;
     padding: 2rem;
     background-color: var(--background);
-    color: #241d1b;
+    color: var(--cor1);
+    border-top: 1px solid var(--cor1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -282,8 +250,13 @@ footer ul {
 
 footer ul input[type=email] {
     padding: 1rem;
-    border: 1px solid #241d1b;
+    border: 1px solid var(--cor1);
     background: none;
+}
+
+footer ul input::placeholder {
+    color: var(--cor1);
+    font-weight: 700;
 }
 
 footer ul li p {
@@ -296,15 +269,23 @@ footer ul .list__title p {
     margin-bottom: 1rem;
 }
 
-footer button {
-    padding: 1rem;
-    border: none;
-    background-color: #852529;
-    color: #fff;
+footer ul .list__email {
+    display: flex;
+    gap: .2rem;
 }
 
-/*--------Finishes Footer---------*/
+footer button {
+    padding: 1rem;
+    border: 1px solid var(--cor1);
+    background-color: #d03b40;
+    color: #fff;
+    transition: .3s all;
+}
 
+footer button:hover {
+    box-shadow: 5px 5px var(--cor1);
+}
+/*--------Finishes Footer---------*/
 
 
 /*--------Medias Queries---------*/
@@ -313,14 +294,15 @@ footer button {
 /*-------------Header Mobile/Tablet-----------*/
 nav {
     background-color: #241d1b83;
+    border-bottom: 1px solid #fff;
     padding: 0;
 }
 
-nav #logo {
+nav .logo {
     padding-left: 1rem;
 }
 
-#menu-desktop {
+.menu-desktop {
     width: 100%;
     height: 0;
     display: block;
@@ -332,11 +314,11 @@ nav #logo {
     transition: .6s;
 }
 
-#menu-desktop li {
+.menu-desktop li {
     padding: 1.2rem;
 }
 
-#menu-mobile {
+.menu-mobile {
     display: block;
     margin: 1rem;
     padding: 1rem;
@@ -345,7 +327,7 @@ nav #logo {
     cursor: pointer;
 }
 
-button #icon {
+button .menu-mobile__icon {
     width: 30px;
     display: block;
     color: #f5f0ed;
@@ -353,7 +335,7 @@ button #icon {
     transition: .2s all;
 }
 
-button #icon::after {
+button .menu-mobile__icon::after {
     width: 30px;
     height: 1px;
     display: block;
@@ -363,7 +345,7 @@ button #icon::after {
     position: relative;
 }
 
-button #icon::before {
+button .menu-mobile__icon::before {
     width: 30px;
     height: 1px;
     display: block;
@@ -373,34 +355,25 @@ button #icon::before {
     position: relative;
 }
 
-#nav.active button #icon {
+.nav.active button .menu-mobile__icon {
     transform: rotate(45deg);
 }
 
-#nav.active button #icon::after {
+.nav.active button .menu-mobile__icon::after {
     transform: rotate(90deg);
     top: -7px;
 }
 
-#nav.active button #icon::before {
+.nav.active button .menu-mobile__icon::before {
     display: none;
 }
 
-#nav.active #menu-desktop {
+.nav.active .menu-desktop {
     height: calc(100vh - 80px);
     visibility: visible;
     z-index: 2;
 }
 /*-------------Finishes Header Mobile/Tablet-----------*/
-
-/*--------Starts Section 1---------*/
-.container {
-    flex-direction: column;
-}
-.container div {
-    width: 100%;
-}
-/*--------Finishes Section 1---------*/
 
 /*--------Starts Description---------*/
 .description {
@@ -408,7 +381,10 @@ button #icon::before {
 }
 
 .description div {
+    width: 100%;
     height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--cor1);
 }
 
 .description img {
@@ -435,6 +411,7 @@ footer .list-container {
 
 footer ul {
     width: 90%;
+    margin: 1.5rem;
 }
 }
 

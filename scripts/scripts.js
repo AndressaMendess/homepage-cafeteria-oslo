@@ -1,7 +1,7 @@
-let menuMobile = document.querySelector('#menu-mobile')
+let menuMobile = document.querySelector('.menu-mobile')
 
 function toggleMenu() {
-    let nav = document.getElementById('nav')
+    let nav = document.querySelector('.nav')
     nav.classList.toggle('active')
 }
 
