@@ -26,7 +26,7 @@ body {
 /*---------Starts Header-----------*/
 .header-container {
     width: 100%;
-    min-height: 600px;
+    min-height: 750px;
     display: flex;
     flex-direction: column;
     background: var(--background) url(../media/Fondo1.jpg) center center fixed;
@@ -129,7 +129,7 @@ nav {
 /*-------- Starts container-two ---------*/
 .container-two {
     width: 100%;
-    min-height: 500px;
+    min-height: 650px;
     background: #ded6c0 url(../media/Fondo2.jpg) center center fixed;
     border-top: 1px solid var(--cor1);
     border-bottom: 1px solid var(--cor1);
@@ -260,7 +260,7 @@ nav {
 }
 
 .map__item h1 {
-    font: 700 2em var(--corpo);
+    font: 800 2em var(--corpo);
     margin-bottom: 1rem;
 }
 
@@ -303,6 +303,14 @@ footer .list-container {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
+}
+
+footer > p {
+    width: 100%;
+    padding-top: 1rem;
+    text-align: center;
+    font: 600 1em var(--corpo);
+    border-top: 1px solid var(--cor1);
 }
 
 footer ul {
@@ -439,11 +447,13 @@ button .menu-mobile__icon::before {
 /*--------Starts Description---------*/
 .description {
     flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .description div {
     width: 100%;
-    height: auto;
+    gap: 2rem;
+    min-height: 200px;
     border-right: none;
     border-bottom: 1px solid var(--cor1);
 }
@@ -473,6 +483,7 @@ button .menu-mobile__icon::before {
 .map {
     flex-direction: column-reverse;
     justify-content: space-around;
+    gap: 3rem;
 }
 
 .map__item {
