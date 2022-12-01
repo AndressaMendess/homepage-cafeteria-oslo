@@ -18,6 +18,11 @@
     text-decoration: none;
 }
 
+::selection {
+    color: #fff;
+    background-color: #d03b40;
+}
+
 body {
     font-family: var(--corpo);
     background-color: var(--background);
@@ -117,7 +122,12 @@ nav {
     text-align: center;
 }
 
+.description div h2 {
+    font: 800 1.5em var(--corpo);
+}
+
 .description div p {
+    font: 500 1em var(--corpo);
     line-height: 1.8em;
 }
 
